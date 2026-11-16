@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANSES Sim // Verificador Jubilatorio — Simón Canessa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="card">
+        <div class="badge">REPÚBLICA ARGENTINA • SIMULADOR PREVISIONAL</div>
+        <h1>Verificador de <span class="accent">Edad Jubilatoria</span></h1>
+        <p class="subtitle">Calculá al instante si cumplís con los requisitos vigentes en Argentina.</p>
+
+        <!-- Selector de género -->
+        <div class="form-group">
+            <label>Seleccioná tu género</label>
+            <div class="gender-selector">
+                <button type="button" class="gender-btn active" data-gender="mujer">
+                    👩 Mujer <small>(60 años)</small>
+                </button>
+                <button type="button" class="gender-btn" data-gender="hombre">
+                    👨 Hombre <small>(65 años)</small>
+                </button>
+            </div>
+        </div>
+
+        <!-- Selector de edad -->
+        <div class="form-group">
+            <div class="age-header">
+                <label for="ageInput">Ingresá tu edad actual</label>
+                <span class="age-badge"><strong id="ageDisplay">35</strong> años</span>
+            </div>
+            <input type="range" id="ageSlider" min="1" max="100" value="35">
+            <input type="number" id="ageInput" min="1" max="120" value="35" placeholder="Ej: 62">
+        </div>
+
+        <button id="checkBtn" class="primary-btn">Verificar Estado</button>
+
+        <!-- Resultado dinámico -->
+        <div id="resultBox" class="result-box hidden">
+            <div class="result-header">
+                <span id="statusIcon" class="status-icon"></span>
+                <h2 id="resultTitle"></h2>
+            </div>
+            <p id="resultDetail"></p>
+            <div class="progress-track">
+                <div id="progressBar" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <footer>
+            Desarrollado por <strong>Simón Canessa</strong> • St. Brendan's College (2026)
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
